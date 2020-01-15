@@ -8,7 +8,7 @@ $(document).ready(function() {
         $(".top_mnu").fadeOut(600);
         $(".sandwich").toggleClass("active");
         $(".top_text").css("opacity", "1");
-    }).append("<span>");
+    });
 
     /* Burger. Open and close */
     $(".toggle_mnu").click(function() {
