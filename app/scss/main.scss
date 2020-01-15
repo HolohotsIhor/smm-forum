@@ -119,6 +119,7 @@ img {
 	max-width: 100%;
 }
 
+
 a {
 	text-decoration: none;
 	color: #fff;
@@ -168,7 +169,7 @@ a {
 		}
 
 		@keyframes top-bot-top {
-			50% { top: -70px; }   
+			50% { top: -90px; }   
 			100% { top: -80px; }
 		}
 	}
@@ -218,6 +219,25 @@ a {
 		font-size: 18px;
 		line-height: 21px;
 
+		@media (max-device-width: 991px) {
+			padding-top: 80px;
+		}
+
+		.button-box{
+			position: relative;
+
+			.radial-arrow{
+
+				position: absolute;
+				top: 35px;
+				left: 400px;
+
+				@media (max-device-width: 991px) {
+					display: none;
+				}
+			}
+		}
+
 		h1{
 			font-weight: 900;
 			font-size: 54px;
@@ -226,6 +246,12 @@ a {
 			text-transform: uppercase;
 			letter-spacing: 0;
 			margin-bottom: 30px;
+
+			@media (max-device-width: 767px) {
+				font-size: 32px;
+				line-height: 130%;
+				letter-spacing: 0.02em;
+			}
 
 			span{
 				background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
@@ -244,6 +270,13 @@ a {
 			font-size: 18px;
 			line-height: 26px;
 
+			@media (max-device-width: 767px) {
+				font-size: 14px;
+				line-height: 16px;
+				letter-spacing: 0.02em;
+			}
+			
+
 			&.bott{
 				margin-bottom: 25px;
 				font-size: 20px;
@@ -255,6 +288,15 @@ a {
 				border-radius: 2px;
 				padding: 1px 3px;
 				margin-right: 20px;
+
+				@media (max-device-width: 767px) {
+					display: block;
+					float: left;
+					font-size: 12px;
+					line-height: 14px;
+					letter-spacing: 0.02em;
+					padding: 9px 6px;
+				}
 			}
 		}
 	}

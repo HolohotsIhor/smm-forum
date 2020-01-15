@@ -136,13 +136,13 @@ a {
 
 @-webkit-keyframes top-bot-top {
   50% {
-    top: -70px; }
+    top: -90px; }
   100% {
     top: -80px; } }
 
 @keyframes top-bot-top {
   50% {
-    top: -70px; }
+    top: -90px; }
   100% {
     top: -80px; } }
 
@@ -185,6 +185,18 @@ a {
     padding-top: 115px;
     font-size: 18px;
     line-height: 21px; }
+    @media (max-device-width: 991px) {
+      .head .content-wrapper {
+        padding-top: 80px; } }
+    .head .content-wrapper .button-box {
+      position: relative; }
+      .head .content-wrapper .button-box .radial-arrow {
+        position: absolute;
+        top: 35px;
+        left: 400px; }
+        @media (max-device-width: 991px) {
+          .head .content-wrapper .button-box .radial-arrow {
+            display: none; } }
     .head .content-wrapper h1 {
       font-weight: 900;
       font-size: 54px;
@@ -193,6 +205,11 @@ a {
       text-transform: uppercase;
       letter-spacing: 0;
       margin-bottom: 30px; }
+      @media (max-device-width: 767px) {
+        .head .content-wrapper h1 {
+          font-size: 32px;
+          line-height: 130%;
+          letter-spacing: 0.02em; } }
       .head .content-wrapper h1 span {
         background: -o-linear-gradient(4.17deg, #7B20B1 7.61%, #BB45E4 105.22%);
         background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
@@ -205,6 +222,11 @@ a {
     .head .content-wrapper p {
       font-size: 18px;
       line-height: 26px; }
+      @media (max-device-width: 767px) {
+        .head .content-wrapper p {
+          font-size: 14px;
+          line-height: 16px;
+          letter-spacing: 0.02em; } }
       .head .content-wrapper p.bott {
         margin-bottom: 25px;
         font-size: 20px;
@@ -215,6 +237,14 @@ a {
         border-radius: 2px;
         padding: 1px 3px;
         margin-right: 20px; }
+        @media (max-device-width: 767px) {
+          .head .content-wrapper p span {
+            display: block;
+            float: left;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.02em;
+            padding: 9px 6px; } }
   .head .top-bar {
     padding-top: 32px; }
     @media (max-device-width: 767px) {
