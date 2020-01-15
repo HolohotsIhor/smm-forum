@@ -127,6 +127,51 @@ a {
 		text-decoration: none;
 		color: #fff;
 	}
+
+	&.button-trapec{
+		background: url(../img/button-bg.png);
+		width: 341px;
+		height: 80px;
+		display: inline-block;
+		text-align: center;
+		background-size: no-repeat;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		padding-top: 27px;
+		z-index: 2;
+		position: relative;
+
+		&::before{
+			z-index: 1;
+			content: "";
+			width: 305px;
+			height: 70px;
+			margin-left: 14px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			box-shadow: 0px 14px 100px rgba(168, 58, 213, 0.46);
+		}
+
+		&::after{
+			content: "";
+			z-index: 3;
+			background: url(../img/ticket.png);
+			width: 230px;
+			height: 240px;
+			position: absolute;
+			top: -80px;
+			right: -90px;
+			animation: top-bot-top 2s ease-in-out infinite;
+		}
+
+		@keyframes top-bot-top {
+			50% { top: -70px; }   
+			100% { top: -80px; }
+		}
+	}
 }
 
 .btn {
@@ -156,7 +201,7 @@ a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: center;
-	background-position-y: center;
+	background-position-y: top;
 
 	@media (max-device-width: 767px) {
 		background: url(../img/main-mobile-bg.png);
@@ -165,6 +210,53 @@ a {
 		background-size: cover;
 		background-position-x: center;
 		background-position-y: center;
+	}
+
+	.content-wrapper{
+		color: $white;
+		padding-top: 115px;
+		font-size: 18px;
+		line-height: 21px;
+
+		h1{
+			font-weight: 900;
+			font-size: 54px;
+			line-height: 70px;
+			font-family: 'Gilroy-Black', sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 0;
+			margin-bottom: 30px;
+
+			span{
+				background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				&.date{
+					color: #0c071a;
+					background: transparent;
+					-webkit-text-stroke: 3px #BB45E4;
+				}
+			}
+		}
+
+		p{
+			font-size: 18px;
+			line-height: 26px;
+
+			&.bott{
+				margin-bottom: 25px;
+				font-size: 20px;
+				margin-bottom: 70px;
+			}
+
+			span{
+				background: linear-gradient(87.09deg, #7B20B1 7.61%, #BB45E4 105.22%);
+				border-radius: 2px;
+				padding: 1px 3px;
+				margin-right: 20px;
+			}
+		}
 	}
 
 	.top-bar {
@@ -336,9 +428,6 @@ a {
 					&:nth-child(4) a {
 						-webkit-animation-delay: 0.4s;
 						animation-delay: 0.4s;
-					}
-
-					&.last-child{
 						margin-bottom: 85px;
 					}
 				}
@@ -374,70 +463,30 @@ a {
 			}
 
 			.more-info-box {
-				-webkit-animation-delay: 0.6s;
-				animation-delay: 0.6s;
-				margin-top: 20px;
-
-				i {
-					color: $white;
-				}
-
-				color: $white;
 				text-align: center;
 
-				.phone-box {
-					margin-left: 18px;
-					margin-bottom: 10px;
+				.social-icons{
 
-					@media (max-device-width: 575px) {
-						margin-left: 0px;
-					}
-
-					@media (max-device-width: 320px) {
-						margin-top: -7px;
-					}
-
-					i {
-						font-size: 12px;
-						margin-left: -13px;
-
-						@media (max-device-width: 575px) {
-							display: none;
-						}
-					}
-
-					a {
-						color: $white;
-						transition: .3s;
-						font-family: 'Open Sans', sans-serif;
-
-						@media (max-device-width: 575px) {
-							font-size: 12px;
-						}
-					}
-
-					a:hover {
-						color: $violet;
-					}
-				}
-
-				.work-time {
-					font-size: 12px;
-				}
-
-				.social-box {
-					margin-bottom: 15px;
-
-					i {
-						font-size: 22px;
-					}
-
-					a i {
+					a{
 						margin-right: 10px;
+
+						&:last-child{
+							margin-right: 0;
+						}
+					}
+				}
+				
+				a{
+					&.phone {
+						font-size: 20px;
+						font-family: 'Gilroy-Bold', sans-serif;
+						font-weight: bold;
+						margin-bottom: 10px;
+						display: block;
 					}
 
-					a:last-child i {
-						margin-right: 0px;
+					span {
+						color: #7B20B1;
 					}
 				}
 			}
