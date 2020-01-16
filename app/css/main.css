@@ -1482,3 +1482,49 @@ textarea {
             -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                     transform: rotate(45deg); }
+    .our-forum .main-content .timer-box img {
+      margin-top: -100px;
+      margin-right: 20px; }
+    .our-forum .main-content .timer-box .dsCountDown {
+      padding-left: 45px; }
+    .our-forum .main-content .timer-box .dsCountDown.ds-white > .ds-element.ds-element-seconds {
+      display: none; }
+    .our-forum .main-content .timer-box .ds-white .ds-element {
+      border: 0; }
+    .our-forum .main-content .timer-box .dsCountDown.ds-white {
+      border: 0;
+      background: #fff;
+      -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      width: 361px;
+      height: 120px;
+      text-align: center; }
+    .our-forum .main-content .timer-box .ds-element {
+      margin: 0 auto;
+      margin-right: 10px; }
+      .our-forum .main-content .timer-box .ds-element .ds-element-title {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: right;
+        letter-spacing: 0.02em;
+        color: #4F4F4F;
+        font-family: 'Gilroy-Regular', sans-serif;
+        text-transform: capitalize;
+        text-align: center; }
+      .our-forum .main-content .timer-box .ds-element .ds-element-value {
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #7B20B1;
+        text-align: center;
+        margin-top: -13px;
+        position: relative; }
+        .our-forum .main-content .timer-box .ds-element .ds-element-value::after {
+          content: ":";
+          position: absolute;
+          top: 0;
+          right: -22px; }
+        .our-forum .main-content .timer-box .ds-element .ds-element-value.ds-minutes::after {
+          display: none; }

@@ -40,9 +40,7 @@
 }
 
 .dsCountDown.ds-white > .ds-element.ds-element-seconds {
-	margin-right: 0;
-	padding-right: 0;
-	border-right: 0;
+	display: none;
 }
 
 .ds-white .ds-element-title {

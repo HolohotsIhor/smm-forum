@@ -1775,6 +1775,72 @@ textarea {
 
 		.timer-box{
 
+			img{
+				margin-top: -100px;
+				margin-right: 20px;
+			}
+
+			.dsCountDown{
+				padding-left: 45px;
+			}
+
+			.dsCountDown.ds-white > .ds-element.ds-element-seconds {
+				display: none;
+			}
+
+			.ds-white .ds-element{
+				border: 0;
+			}
+
+			.dsCountDown.ds-white{
+				border: 0;
+				background: $white;
+				box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+				border-radius: 15px;
+				width: 361px;
+				height: 120px;
+				text-align: center;
+			}
+
+			.ds-element{
+				margin: 0 auto;
+				margin-right: 10px;
+
+				.ds-element-title{
+					font-size: 18px;
+					line-height: 150%;
+					text-align: right;
+					letter-spacing: 0.02em;
+					color: #4F4F4F;
+					font-family: 'Gilroy-Regular', sans-serif;
+					text-transform: capitalize;
+					text-align: center;
+				}
+
+				.ds-element-value{
+					font-weight: bold;
+					font-size: 64px;
+					line-height: 150%;
+					letter-spacing: 0.02em;
+					color: #7B20B1;
+					text-align: center;
+					margin-top: -13px;
+					position: relative;
+
+					&::after{
+						content: ":";
+						position: absolute;
+						top: 0;
+						right: -22px;
+					}
+
+					&.ds-minutes{
+						&::after{
+							display: none;
+						}
+					}
+				}
+			}
 		}		
 	}
 }
