@@ -5,6 +5,8 @@
 3.  Header
 4.  Form
 5.  Command
+6. 	What about
+7.  Our forum
 
 */
 
@@ -1235,6 +1237,163 @@ textarea {
 			font-size: 16px;
 			line-height: 150%;
 			color: #050505;
+		}
+	}
+}
+
+
+/* 6. 	What about */
+.what-about{
+	background-color: #0C0011;
+	background-image: url(../img/what-about-mask.png); 
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	position: relative;
+
+	&::after{
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 0;
+		background: url(../img/parralax-figure.png);
+		width: 300px;
+		height: 235px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position-x: 140px;
+		background-position-y: -10px;
+		display: none;
+
+		@media (max-device-width: 767px) {
+			display: block;
+		}
+	}
+	
+	.parralax-box{
+		@media (max-device-width: 767px) {
+			display: none;
+		}
+	}
+
+	.text-box{
+
+		.article-box{
+			text-align: left;
+
+			img{
+				margin-bottom: 15px;
+
+				@media (max-device-width: 767px) {
+					display: none;
+				}
+			}
+
+			h2{
+				display: none;
+
+				@media (max-device-width: 767px) {
+					display: inline-block;
+					font-weight: 900;
+					font-size: 38px;
+					line-height: 130%;
+					text-transform: uppercase;
+					font-family: 'Gilroy-Black', sans-serif;
+					background: transparent;
+					-webkit-text-stroke: 3px #BB45E4;
+					background: -o-linear-gradient(4.17deg, #7B20B1 7.61%, #BB45E4 105.22%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					padding-right: 50%;
+				}
+			}
+
+			h3{
+				color: $white;
+				font-weight: 800;
+				font-size: 43px;
+				line-height: 140%;
+				font-family: 'Gilroy-Black', sans-serif;
+				text-transform: uppercase;
+				background-color: $white;
+				background-image: url(../img/article-mask.png);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-position-x: -621px;
+				background-position-y: -57px;
+				margin-bottom: 50px;
+
+				@media (max-device-width: 991px) {
+					font-weight: 800;
+					font-size: 29px;
+					line-height: 140%;
+					letter-spacing: 0.02em;
+					text-transform: uppercase;
+				}
+			}
+
+			ul{
+				margin-left: 50px;
+
+				li{
+					color: $white;
+					font-style: normal;
+					font-weight: normal;
+					font-size: 20px;
+					line-height: 160%;
+					letter-spacing: 0.02em;
+					margin-bottom: 15px;
+					position: relative;
+					z-index: 1;
+
+					span{
+						position: relative;
+
+						&::after{
+							position: absolute;
+							bottom: 3px;
+							z-index: -1;
+							left: 0;
+							height: 5px;
+							width: 100%;
+							content: "";
+							background: linear-gradient(81.43deg, #7B20B1 7.61%, #BB45E4 105.22%);
+						}
+					}
+
+					&::before{
+						content: "";
+						height: 1px;
+						width: 30px;
+						background-color: $white;
+						position: absolute;
+						top: 15px;
+						left: -50px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* 7.  Our forum */
+.our-forum{
+
+	.img-box{
+		padding-top: 20px;
+	}
+
+	.text-box{
+		font-size: 46px;
+		line-height: 60px;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		font-family: 'Gilroy-Black', sans-serif;
+		color: #050505;
+
+		span{
+			color: $violet;
 		}
 	}
 }
