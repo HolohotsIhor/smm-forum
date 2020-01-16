@@ -23,6 +23,34 @@ $(document).ready(function() {
         };
     });
 
+    /* Timer */
+    var today = new Date();
+            var tomorrow = new Date(today.getTime() + (72 * 60 * 60 * 1000));
+            var dayTomorrow = tomorrow.getDate();
+            var monthTomorrow = tomorrow.getMonth();
+            var yearTomorrow = tomorrow.getFullYear();
+            var arr=[
+            'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June',
+                    'July',
+                    'August',
+                    'September',
+                    'November',
+                    'December',
+            ];
+            var finalMounth = arr[monthTomorrow];
+
+            var now = new Date();
+            $('.demo1').dsCountDown({
+                endDate: new Date(finalMounth + " " + dayTomorrow + ", " + yearTomorrow + " 12:57:00")
+            });
+
+            $(".ds-element.ds-element-seconds").css("display", "none");
+
     /* Parallax 
     $('.parallax-window').parallax({imageSrc: 'img/background.jpg'}); */
 
@@ -34,7 +62,7 @@ $(document).ready(function() {
     $(window).resize(function(){
         heightDetect();
     });
-     */
+    */
 
     /* Scrool animation
     $(window).scroll(function() {
