@@ -264,7 +264,6 @@ a {
 			position: relative;
 
 			.radial-arrow{
-
 				position: absolute;
 				top: 35px;
 				left: 400px;
@@ -1252,7 +1251,7 @@ textarea {
 	background-repeat: no-repeat;
 	position: relative;
 
-	&::after{
+	&::before{
 		content: "";
 		position: absolute;
 		right: 0;
@@ -1272,6 +1271,75 @@ textarea {
 	}
 	
 	.parralax-box{
+		position: relative;
+		min-height: 432px;
+
+		@media (max-device-width: 1199px) {
+			min-height: 371px;
+		}
+
+		@media (max-device-width: 991px) {
+			min-height: 351px;
+		}
+
+		img{
+			transition: 1s;
+		}
+
+		.left-box{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: "";
+
+			&:hover ~ img {
+				margin-left: 10px;
+			}
+		}
+
+		.right-box{
+			width: 50%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: "";
+
+			&:hover ~ img {
+				margin-left: -10px;
+			}
+		}
+
+		.top-box{
+			width: 100%;
+			height: 25%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: "";
+			z-index: 1;
+
+			&:hover ~ img {
+				margin-top: 10px;
+			}
+		}
+
+		.bottom-box{
+			width: 100%;
+			height: 25%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			content: "";
+			z-index: 1;
+
+			&:hover ~ img {
+				margin-top: -10px;
+			}
+		}
+
 		@media (max-device-width: 767px) {
 			display: none;
 		}
@@ -1379,9 +1447,15 @@ textarea {
 
 /* 7.  Our forum */
 .our-forum{
+	background-color: #F4F4F4;
 
 	.img-box{
 		padding-top: 20px;
+		text-align: left;
+
+		@media (max-device-width: 991px) {
+			margin-bottom: 15px;
+		}
 	}
 
 	.text-box{
@@ -1391,9 +1465,269 @@ textarea {
 		text-transform: uppercase;
 		font-family: 'Gilroy-Black', sans-serif;
 		color: #050505;
+		text-align: left;
+		padding-left: 45px;
+
+		@media (max-device-width: 1199px) {
+			letter-spacing: 0;
+			padding-left: 25px;
+			font-size: 45px;
+		}
+
+		@media (max-device-width: 991px) {
+			font-weight: 800;
+			font-size: 16px;
+			line-height: 100%;
+			text-align: center;
+
+			&::after{
+				content: "";
+				position: absolute;
+				right: 42%;
+				top: 28px;
+				background: url(../img/arrow.png);
+				width: 19px;
+				height: 15px;
+				background-size: cover;
+				transform: rotate(90deg);
+			}
+		}
 
 		span{
 			color: $violet;
+		}
+	}
+
+	.main-content{
+		background: url(../img/map-countries.png);
+		background-repeat: no-repeat;
+		height: 500px;
+		margin-top: 50px;
+		background-size: contain;
+
+		@media (max-device-width: 320px) {
+			background: url(../img/map-countries-mobile.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.text-box-article{
+			text-align: left;
+			font-family: Gilroy;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 36px;
+			line-height: 120%;
+			font-family: 'Gilroy-Bold', sans-serif;
+			color: #050505;
+			opacity: 0.9;
+			padding-top: 65px;
+			overflow: hidden;
+
+			@media (max-device-width: 991px) {
+				padding-top: 165px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;
+			}
+
+			p{
+				font-family: 'Gilroy-Black', sans-serif;
+				font-weight: bold;
+				position: relative;
+
+				@media (max-device-width: 991px) {
+					font-size: 18px;
+					line-height: 100%;
+					text-align: center;
+					letter-spacing: 0.03em;
+					text-transform: uppercase;
+				}
+
+				&::after{
+					content: "";
+					position: absolute;
+					right: 174px;
+					top: 52px;
+					background: url(../img/arrow.png);
+					width: 33px;
+					height: 25px;
+					background-size: cover;
+
+					@media (max-device-width: 991px) {
+						display: none;
+					}
+				}
+			}
+
+			.button-box{
+				margin-top: 187px;
+				position: relative;
+
+				@media (max-device-width: 991px) {
+					margin-top: 30px;
+					display: inline-block;
+				}
+
+				.radial-arrow{
+					position: absolute;
+					top: -120px;
+					left: 10px;
+					width: 340px;
+					height: 73px;
+
+					@media (max-device-width: 991px) {
+						display: none;
+					}
+				}
+
+				.radial-arrow-mobile{
+					display: none;
+					position: absolute;
+					top: 0px;
+					left: 10px;
+					width: 255px;
+					height: 88px;
+
+					@media (max-device-width: 991px) {
+						display: inline;
+						top: 24px;
+						left: -6px;
+					}
+				}
+
+				a{
+
+					&.button-trapec{
+
+						@media (max-device-width: 991px) {
+							margin-left: 25px;
+							width: 230px;
+							height: 50px;
+							font-size: 13px;
+							padding-top: 16px;
+						}
+
+						&::before {
+							box-shadow: 0px 14px 40px rgba(168, 58, 213, 0.46);
+
+							@media (max-device-width: 991px) {
+								width: 200px;
+								height: 50px;
+								margin-left: 7px;
+							}
+						}
+
+						&::after{
+							content: "";
+							z-index: 3;
+							background: url(../img/tickets.png);
+							width: 230px;
+							height: 240px;
+							position: absolute;
+							top: -60px;
+							right: -90px;
+							animation: top-bot-top 2s ease-in-out infinite;
+
+							@media (max-device-width: 767px) {
+								background-size: cover;
+								width: 150px;
+								height: 160px;
+								top: -50px;
+								right: -60px;
+								animation: top-bot-top-mob 2s ease-in-out infinite;
+							}
+
+							@media (max-device-width: 400px) {
+								right: -45px;
+							}
+						}
+
+						@keyframes top-bot-top {
+							50% { top: -70px; }   
+							100% { top: -60px; }
+						}
+
+						@keyframes top-bot-top-mob {
+							50% { top: -55px; }   
+							100% { top: -50px; }
+						}
+					}
+				}
+			}
+		}
+
+		.map-box{
+			position: relative;
+
+			.dot-group{
+
+				.dot-item{
+					width: 23px;
+					height: 21px;
+					background: url(../img/plus.png);
+					background-repeat: no-repeat;
+					cursor: pointer;
+					position: relative;
+
+					&:nth-child(1){
+						left: 72px;
+						top: 91px;
+						position: absolute;
+					}
+
+					&:nth-child(2){
+						left: 48px;
+						top: 130px;
+						position: absolute;
+					}
+
+					&:nth-child(3){
+						left: 79px;
+						top: 154px;
+						position: absolute;
+					}
+
+					&:nth-child(4){
+						left: 167px;
+						top: 106px;
+						position: absolute;
+					}
+
+					&:nth-child(5){
+						left: 208px;
+						top: 179px;
+						position: absolute;
+						background: url(../img/minus.png);
+					}
+
+					.country-name{
+						font-weight: bold;
+						font-size: 24px;
+						line-height: 100%;
+						letter-spacing: 0.02em;
+						color: #050505;
+						background: $white;
+						position: absolute;
+						padding: 13px 36px;
+						border-radius: 10px;
+						left: 45px;
+						top: -17px;
+						box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+
+						&::before{
+							content: "";
+							position: absolute;
+							width: 15px;
+							height: 15px;
+							background-color: $white;
+							left: -7px;
+							top: 19px;
+							transform: rotate(45deg);
+						}
+					}
+				}
+			}
 		}
 	}
 }
