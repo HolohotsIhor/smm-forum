@@ -8,6 +8,7 @@
 6. 	What about
 7.  Our forum
 8.  Footer
+9.  Modal
 
 */
 
@@ -1202,13 +1203,117 @@ textarea {
 		}
 	}
 
+	.btn-wrapp{
+		width: 100%;
+		padding-top: 40px;
+		text-align: center;
+		position: relative;
 
+		@media (max-device-width: 575px) {
+			width: 300px;
+			margin: 0 auto;
+		}
+
+		&::before{
+			content: "";
+			background: url(../img/arrow.png);
+			width: 33px;
+			height: 25px;
+			position: absolute;
+			left: 251px;
+			top: 32px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: rotate(90deg);
+
+			@media (max-device-width: 991px) {
+				background-repeat: no-repeat;
+				width: 19px;
+				height: 14px;
+				background-size: contain;
+				transform: rotate(180deg);
+				left: 222px;
+				top: 57px;
+			}
+
+			@media (max-device-width: 767px) {
+				left: 132px;
+			}
+
+			@media (max-device-width: 575px) {
+				left: 12px;
+			}
+		}
+
+		&::after{
+			content: "";
+			background: url(../img/four-arrows.png);
+			width: 79px;
+			height: 46px;
+			position: absolute;
+			right: 113px;
+			top: -8px;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			@media (max-device-width: 991px) {
+				background: url(../img/arrow.png);
+				background-repeat: no-repeat;
+				width: 19px;
+				height: 14px;
+				background-size: contain;
+				right: 222px;
+				top: 57px;
+			}
+
+			@media (max-device-width: 767px) {
+				right: 132px;
+			}
+
+			@media (max-device-width: 575px) {
+				right: 12px;
+			}
+		}
+
+		.more-speakers{
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			background: linear-gradient(87.57deg, #7B20B1 7.61%, #BB45E4 105.22%);
+			box-shadow: 0px 20px 100px rgba(168, 58, 213, 0.7);
+			border-radius: 4px;
+			padding: 25px 99px;
+			display: block;
+			margin: 0 auto;
+			transition: .2s;
+			color: $white;
+			font-weight: bold;
+			font-family: 'Gilroy-Bold', sans-serif;
+			cursor: pointer;
+			display: inline-block;
+
+			@media (max-device-width: 991px) {
+				font-size: 13px;
+				line-height: 16px;
+				padding: 17px 66px;
+			}
+
+			&:hover{
+				box-shadow: 0px 20px 100px rgba(168, 58, 213, 1);
+			}
+		}
+	}
 
 	.item-box {
 		margin-bottom: 45px;
 
 		@media (max-device-width: 991px) {
 			text-align: center;
+		}
+
+		&.hiden-item{
+			display: none;
 		}
 
 		img {
@@ -1970,8 +2075,26 @@ footer{
 	background-repeat: no-repeat;
 	height: 538px;
 	padding-top: 100px;
-	background-position-x: left;
-	background-position-y: top;
+	background-position-x: center;
+	background-position-y: bottom;
+
+	@media (max-device-width: 1199px) {
+		background-position-x: -400px;
+	}
+
+	@media (max-device-width: 1099px) {
+		background-position-x: -500px;	
+	}
+
+	@media (max-device-width: 991px) {
+		background-image: url(../img/footer-bg-mobile.png);
+		background-position-x: center;
+		background-position-y: center;
+		height: auto;
+		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 30px;
+	}
 
 	.content-box{
 		text-align: left;
@@ -1994,10 +2117,22 @@ footer{
 				background-position-x: -621px;
 				background-position-y: -57px;
 				margin-bottom: 50px;
+
+				@media (max-device-width: 991px) {
+					font-size: 32px;
+					line-height: 70px;
+					letter-spacing: 0.02em;
+					text-transform: uppercase;
+					margin-bottom: 0;
+				}
 			}
 
 			img{
 				margin-bottom: 10px;
+
+				@media (max-device-width: 991px) {
+					margin-bottom: 5px;
+				}
 			}
 
 			table{
@@ -2011,6 +2146,12 @@ footer{
 							font-size: 20px;
 							color: #BDBDBD;
 							width: 46%;
+
+							@media (max-device-width: 991px) {
+								font-size: 18px;
+								line-height: 21px;
+								width: 30%;
+							}
 						}
 
 						&:last-child{
@@ -2018,6 +2159,13 @@ footer{
 							font-size: 20px;
 							color: $white;
 							font-family: 'Gilroy-Bold', sans-serif;
+							
+							@media (max-device-width: 991px) {
+								font-size: 18px;
+								line-height: 22px;
+								display: block;
+								margin-bottom: 10px;
+							}
 						}
 					}
 				}
@@ -2027,10 +2175,14 @@ footer{
 		.middle-content-wrapp{
 			padding-top: 15px;
 
+			@media (max-device-width: 991px) {
+				margin-bottom: 25px;
+			}
+
 			table{
 
 				tr{
-					
+
 					td{
 						display: block;
 						float: left;
@@ -2041,6 +2193,17 @@ footer{
 							line-height: 21px;
 							color: $white;
 							margin-right: 1%;
+
+							@media (max-device-width: 1199px) {
+								font-size: 14px;
+							}
+
+							@media (max-device-width: 991px) {
+								font-size: 18px;
+								line-height: 21px;
+								width: 100%;
+								margin-bottom: 5px;
+							}
 						}
 
 						&:last-child{
@@ -2052,6 +2215,10 @@ footer{
 							line-height: 48px;
 							font-family: 'Gilroy-Bold', sans-serif;
 							letter-spacing: -1px;
+
+							@media (max-device-width: 1199px) {
+								font-size: 33px;
+							}
 						}
 					}
 				}
@@ -2078,20 +2245,121 @@ footer{
 			font-size: 14px;
 			line-height: 16px;
 
+			@media (max-device-width: 1199px) {
+				margin-right: 30px;
+			}
+
+			@media (max-device-width: 991px) {
+				margin-right: 0;
+				text-align: center;
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
 			&:last-child{
 				margin-right: 0;
+				margin-bottom: 0;
 			}
 		}
-		
+
 		.social-box{
 			display: inline-block;	
 			margin-right: 115px;
 
+			@media (max-device-width: 1199px) {
+				margin-right: 30px;
+			}
+
+			@media (max-device-width: 991px) {
+				text-align: center;
+				margin: 0 auto;
+				display: block;
+				margin-bottom: 10px;
+			}
+
 			a{
 				margin-right: 15px;	
 
+				@media (max-device-width: 1199px) {
+					margin-right: 10px;
+				}
+
+				@media (max-device-width: 991px) {
+					margin-right: 0;
+					text-align: center;
+				}
+
 				&:last-child{
 					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+/* 9.  Modal */
+.modal{
+	text-align: center;
+
+	.modal-dialog{
+
+		.modal-content{
+			background: rgba(15, 14, 22, 1);
+			box-shadow: 0px 14px 100px rgba(168, 58, 213, 0.46);
+			border-radius: 0px 32px;
+
+			.modal-header{
+				border: 0;
+				padding-top: 0;
+				padding-bottom: 0;
+				background: transparent;
+
+				button{
+
+					&:focus, &:active{
+						outline: 0;
+					}
+
+					span{
+						font-size: 42px;
+						color: $white;
+						font-family: 'Gilroy-Light', sans-serif;
+						font-weight: 100;
+					}
+				}
+			}
+
+			.modal-body{
+				background: transparent;
+
+				h5{
+					font-size: 24px;
+					line-height: 150%;
+					font-weight: bold;
+					letter-spacing: 0.02em;
+					text-transform: uppercase;
+					font-family: 'Gilroy-Black', sans-serif;
+					color: $white;
+					margin-bottom: 0;
+
+					span{
+						background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+
+				p{
+					font-size: 18px;
+					line-height: 150%;
+					opacity: 0.6;
+					color: $white;
+
+					&:last-child{
+						font-size: 18px;
+						line-height: 21px;
+						padding: 0 50px;
+					}
 				}
 			}
 		}

@@ -23,6 +23,13 @@ $(document).ready(function() {
         };
     });
 
+    /* More speakers */
+    $(".more-speakers").click(function() {
+        $(".command .item-box.hiden-item").css("display", "block");
+        $(".btn-wrapp").css("display", "none");
+    });
+    
+
     /* Timer */
     var today = new Date();
             var tomorrow = new Date(today.getTime() + (72 * 60 * 60 * 1000));

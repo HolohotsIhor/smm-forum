@@ -8,6 +8,7 @@
 6. 	What about
 7.  Our forum
 8.  Footer
+9.  Modal
 
 */
 /* 1.  Fonts including */
@@ -1030,11 +1031,106 @@ textarea {
       @media (max-device-width: 991px) {
         .command .articles .article-text:after {
           display: none; } }
+  .command .btn-wrapp {
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+    position: relative; }
+    @media (max-device-width: 575px) {
+      .command .btn-wrapp {
+        width: 300px;
+        margin: 0 auto; } }
+    .command .btn-wrapp::before {
+      content: "";
+      background: url(../img/arrow.png);
+      width: 33px;
+      height: 25px;
+      position: absolute;
+      left: 251px;
+      top: 32px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg); }
+      @media (max-device-width: 991px) {
+        .command .btn-wrapp::before {
+          background-repeat: no-repeat;
+          width: 19px;
+          height: 14px;
+          background-size: contain;
+          -webkit-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg);
+          left: 222px;
+          top: 57px; } }
+      @media (max-device-width: 767px) {
+        .command .btn-wrapp::before {
+          left: 132px; } }
+      @media (max-device-width: 575px) {
+        .command .btn-wrapp::before {
+          left: 12px; } }
+    .command .btn-wrapp::after {
+      content: "";
+      background: url(../img/four-arrows.png);
+      width: 79px;
+      height: 46px;
+      position: absolute;
+      right: 113px;
+      top: -8px;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      @media (max-device-width: 991px) {
+        .command .btn-wrapp::after {
+          background: url(../img/arrow.png);
+          background-repeat: no-repeat;
+          width: 19px;
+          height: 14px;
+          background-size: contain;
+          right: 222px;
+          top: 57px; } }
+      @media (max-device-width: 767px) {
+        .command .btn-wrapp::after {
+          right: 132px; } }
+      @media (max-device-width: 575px) {
+        .command .btn-wrapp::after {
+          right: 12px; } }
+    .command .btn-wrapp .more-speakers {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: -o-linear-gradient(2.43deg, #7B20B1 7.61%, #BB45E4 105.22%);
+      background: linear-gradient(87.57deg, #7B20B1 7.61%, #BB45E4 105.22%);
+      -webkit-box-shadow: 0px 20px 100px rgba(168, 58, 213, 0.7);
+              box-shadow: 0px 20px 100px rgba(168, 58, 213, 0.7);
+      border-radius: 4px;
+      padding: 25px 99px;
+      display: block;
+      margin: 0 auto;
+      -webkit-transition: .2s;
+      -o-transition: .2s;
+      transition: .2s;
+      color: #fff;
+      font-weight: bold;
+      font-family: 'Gilroy-Bold', sans-serif;
+      cursor: pointer;
+      display: inline-block; }
+      @media (max-device-width: 991px) {
+        .command .btn-wrapp .more-speakers {
+          font-size: 13px;
+          line-height: 16px;
+          padding: 17px 66px; } }
+      .command .btn-wrapp .more-speakers:hover {
+        -webkit-box-shadow: 0px 20px 100px #a83ad5;
+                box-shadow: 0px 20px 100px #a83ad5; }
   .command .item-box {
     margin-bottom: 45px; }
     @media (max-device-width: 991px) {
       .command .item-box {
         text-align: center; } }
+    .command .item-box.hiden-item {
+      display: none; }
     .command .item-box img {
       margin-right: 35px;
       float: left; }
@@ -1624,8 +1720,23 @@ footer {
   background-repeat: no-repeat;
   height: 538px;
   padding-top: 100px;
-  background-position-x: left;
-  background-position-y: top; }
+  background-position-x: center;
+  background-position-y: bottom; }
+  @media (max-device-width: 1199px) {
+    footer {
+      background-position-x: -400px; } }
+  @media (max-device-width: 1099px) {
+    footer {
+      background-position-x: -500px; } }
+  @media (max-device-width: 991px) {
+    footer {
+      background-image: url(../img/footer-bg-mobile.png);
+      background-position-x: center;
+      background-position-y: center;
+      height: auto;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 30px; } }
   footer .content-box {
     text-align: left; }
     footer .content-box .top-content-wrapp {
@@ -1645,21 +1756,45 @@ footer {
         background-position-x: -621px;
         background-position-y: -57px;
         margin-bottom: 50px; }
+        @media (max-device-width: 991px) {
+          footer .content-box .top-content-wrapp h4 {
+            font-size: 32px;
+            line-height: 70px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 0; } }
       footer .content-box .top-content-wrapp img {
         margin-bottom: 10px; }
+        @media (max-device-width: 991px) {
+          footer .content-box .top-content-wrapp img {
+            margin-bottom: 5px; } }
       footer .content-box .top-content-wrapp table tr td {
         line-height: 40px; }
         footer .content-box .top-content-wrapp table tr td:first-child {
           font-size: 20px;
           color: #BDBDBD;
           width: 46%; }
+          @media (max-device-width: 991px) {
+            footer .content-box .top-content-wrapp table tr td:first-child {
+              font-size: 18px;
+              line-height: 21px;
+              width: 30%; } }
         footer .content-box .top-content-wrapp table tr td:last-child {
           font-weight: bold;
           font-size: 20px;
           color: #fff;
           font-family: 'Gilroy-Bold', sans-serif; }
+          @media (max-device-width: 991px) {
+            footer .content-box .top-content-wrapp table tr td:last-child {
+              font-size: 18px;
+              line-height: 22px;
+              display: block;
+              margin-bottom: 10px; } }
     footer .content-box .middle-content-wrapp {
       padding-top: 15px; }
+      @media (max-device-width: 991px) {
+        footer .content-box .middle-content-wrapp {
+          margin-bottom: 25px; } }
       footer .content-box .middle-content-wrapp table tr td {
         display: block;
         float: left; }
@@ -1669,6 +1804,15 @@ footer {
           line-height: 21px;
           color: #fff;
           margin-right: 1%; }
+          @media (max-device-width: 1199px) {
+            footer .content-box .middle-content-wrapp table tr td:first-child {
+              font-size: 14px; } }
+          @media (max-device-width: 991px) {
+            footer .content-box .middle-content-wrapp table tr td:first-child {
+              font-size: 18px;
+              line-height: 21px;
+              width: 100%;
+              margin-bottom: 5px; } }
         footer .content-box .middle-content-wrapp table tr td:last-child {
           background: -o-linear-gradient(4.17deg, #7B20B1 7.61%, #BB45E4 105.22%);
           background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
@@ -1679,6 +1823,9 @@ footer {
           line-height: 48px;
           font-family: 'Gilroy-Bold', sans-serif;
           letter-spacing: -1px; }
+          @media (max-device-width: 1199px) {
+            footer .content-box .middle-content-wrapp table tr td:last-child {
+              font-size: 33px; } }
   footer .bottom-bar {
     text-align: left;
     color: #fff;
@@ -1689,12 +1836,84 @@ footer {
       margin-bottom: 0;
       font-size: 14px;
       line-height: 16px; }
+      @media (max-device-width: 1199px) {
+        footer .bottom-bar p {
+          margin-right: 30px; } }
+      @media (max-device-width: 991px) {
+        footer .bottom-bar p {
+          margin-right: 0;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 15px; } }
       footer .bottom-bar p:last-child {
-        margin-right: 0; }
+        margin-right: 0;
+        margin-bottom: 0; }
     footer .bottom-bar .social-box {
       display: inline-block;
       margin-right: 115px; }
+      @media (max-device-width: 1199px) {
+        footer .bottom-bar .social-box {
+          margin-right: 30px; } }
+      @media (max-device-width: 991px) {
+        footer .bottom-bar .social-box {
+          text-align: center;
+          margin: 0 auto;
+          display: block;
+          margin-bottom: 10px; } }
       footer .bottom-bar .social-box a {
         margin-right: 15px; }
+        @media (max-device-width: 1199px) {
+          footer .bottom-bar .social-box a {
+            margin-right: 10px; } }
+        @media (max-device-width: 991px) {
+          footer .bottom-bar .social-box a {
+            margin-right: 0;
+            text-align: center; } }
         footer .bottom-bar .social-box a:last-child {
           margin-right: 0; }
+
+/* 9.  Modal */
+.modal {
+  text-align: center; }
+  .modal .modal-dialog .modal-content {
+    background: #0f0e16;
+    -webkit-box-shadow: 0px 14px 100px rgba(168, 58, 213, 0.46);
+            box-shadow: 0px 14px 100px rgba(168, 58, 213, 0.46);
+    border-radius: 0px 32px; }
+    .modal .modal-dialog .modal-content .modal-header {
+      border: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      background: transparent; }
+      .modal .modal-dialog .modal-content .modal-header button:focus, .modal .modal-dialog .modal-content .modal-header button:active {
+        outline: 0; }
+      .modal .modal-dialog .modal-content .modal-header button span {
+        font-size: 42px;
+        color: #fff;
+        font-family: 'Gilroy-Light', sans-serif;
+        font-weight: 100; }
+    .modal .modal-dialog .modal-content .modal-body {
+      background: transparent; }
+      .modal .modal-dialog .modal-content .modal-body h5 {
+        font-size: 24px;
+        line-height: 150%;
+        font-weight: bold;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        font-family: 'Gilroy-Black', sans-serif;
+        color: #fff;
+        margin-bottom: 0; }
+        .modal .modal-dialog .modal-content .modal-body h5 span {
+          background: -o-linear-gradient(4.17deg, #7B20B1 7.61%, #BB45E4 105.22%);
+          background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent; }
+      .modal .modal-dialog .modal-content .modal-body p {
+        font-size: 18px;
+        line-height: 150%;
+        opacity: 0.6;
+        color: #fff; }
+        .modal .modal-dialog .modal-content .modal-body p:last-child {
+          font-size: 18px;
+          line-height: 21px;
+          padding: 0 50px; }
