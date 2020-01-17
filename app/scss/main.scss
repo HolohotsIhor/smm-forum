@@ -1966,27 +1966,134 @@ textarea {
 footer{
 	background-color: rgba(15, 14, 22, 0.9);
 	background-image: url(../img/footer-bg.png); 
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 	height: 538px;
+	padding-top: 100px;
+	background-position-x: left;
+	background-position-y: top;
 
 	.content-box{
 		text-align: left;
+		
+		.top-content-wrapp{
+			padding-bottom: 10px;
+			border-bottom: dashed 2px #413c50;
 
-		h4{
-			color: #fff;
-			font-weight: 800;
-			font-size: 54px;
-			line-height: 70px;
-			font-family: 'Gilroy-Black', sans-serif;
-			text-transform: uppercase;
-			background-color: #fff;
-			background-image: url(../img/article-mask.png);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-position-x: -621px;
-			background-position-y: -57px;
-			margin-bottom: 50px;
+			h4{
+				color: #fff;
+				font-weight: 800;
+				font-size: 54px;
+				line-height: 70px;
+				font-family: 'Gilroy-Black', sans-serif;
+				text-transform: uppercase;
+				background-color: #fff;
+				background-image: url(../img/article-mask.png);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-position-x: -621px;
+				background-position-y: -57px;
+				margin-bottom: 50px;
+			}
+
+			img{
+				margin-bottom: 10px;
+			}
+
+			table{
+
+				tr{
+
+					td{
+						line-height: 40px;
+
+						&:first-child{
+							font-size: 20px;
+							color: #BDBDBD;
+							width: 46%;
+						}
+
+						&:last-child{
+							font-weight: bold;
+							font-size: 20px;
+							color: $white;
+							font-family: 'Gilroy-Bold', sans-serif;
+						}
+					}
+				}
+			}
+		}
+
+		.middle-content-wrapp{
+			padding-top: 15px;
+
+			table{
+
+				tr{
+					
+					td{
+						display: block;
+						float: left;
+
+						&:first-child{
+							width: 49%;
+							font-size: 18px;
+							line-height: 21px;
+							color: $white;
+							margin-right: 1%;
+						}
+
+						&:last-child{
+							background: linear-gradient(85.83deg, #7B20B1 7.61%, #BB45E4 105.22%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+							font-weight: bold;
+							font-size: 39px;
+							line-height: 48px;
+							font-family: 'Gilroy-Bold', sans-serif;
+							letter-spacing: -1px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.map-box{
+
+		img{
+
+		}
+	}
+
+	.bottom-bar{
+		text-align: left;
+		color: $white;
+		padding-top: 30px;
+
+		p{
+			display: inline-block;
+			margin-right: 115px;
+			margin-bottom: 0;
+			font-size: 14px;
+			line-height: 16px;
+
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		
+		.social-box{
+			display: inline-block;	
+			margin-right: 115px;
+
+			a{
+				margin-right: 15px;	
+
+				&:last-child{
+					margin-right: 0;
+				}
+			}
 		}
 	}
 }
