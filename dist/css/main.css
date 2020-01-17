@@ -7,7 +7,6 @@
 5.  Command
 6. 	What about
 7.  Our forum
-8.  Footer
 
 */
 /* 1.  Fonts including */
@@ -47,11 +46,11 @@ body {
   font-size: 16px;
   letter-spacing: 0; }
 
-section, footer {
+section {
   padding: 130px 0px;
   text-align: center; }
   @media (max-device-width: 767px) {
-    section, footer {
+    section {
       padding: 80px 0px; } }
 
 .banner-section {
@@ -520,9 +519,6 @@ a {
           font-size: 20px;
           font-family: 'Gilroy-Bold', sans-serif;
           font-weight: bold; }
-          @media (max-device-width: 1199px) {
-            .head .top-bar .contact-box a.phone {
-              display: none; } }
           @media (max-device-width: 991px) {
             .head .top-bar .contact-box a.phone {
               margin-right: 30px; } }
@@ -1486,156 +1482,49 @@ textarea {
             -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                     transform: rotate(45deg); }
-    .our-forum .main-content .timer-box {
-      position: relative;
-      margin-top: 310px;
-      text-align: left; }
-      @media (max-device-width: 1199px) {
-        .our-forum .main-content .timer-box {
-          margin-top: 332px; } }
-      .our-forum .main-content .timer-box::after {
-        content: "";
-        position: absolute;
-        right: -35px;
-        top: 40px;
-        background: url(../img/four-arrows.png);
-        width: 79px;
-        height: 46px; }
-        @media (max-device-width: 1199px) {
-          .our-forum .main-content .timer-box::after {
-            width: 37px;
-            height: 46px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            right: -24px;
-            top: 40px; } }
-      .our-forum .main-content .timer-box img {
-        margin-top: -100px;
-        margin-right: 20px; }
-      .our-forum .main-content .timer-box .dsCountDown {
-        padding-left: 45px; }
-        @media (max-device-width: 1199px) {
-          .our-forum .main-content .timer-box .dsCountDown {
-            padding-left: 15px; } }
-      .our-forum .main-content .timer-box .dsCountDown.ds-white > .ds-element.ds-element-seconds {
-        display: none; }
-      .our-forum .main-content .timer-box .ds-white .ds-element {
-        border: 0; }
-      .our-forum .main-content .timer-box .dsCountDown.ds-white {
-        border: 0;
-        background: #fff;
-        -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
-                box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-        width: 361px;
-        height: 120px;
+    .our-forum .main-content .timer-box img {
+      margin-top: -100px;
+      margin-right: 20px; }
+    .our-forum .main-content .timer-box .dsCountDown {
+      padding-left: 45px; }
+    .our-forum .main-content .timer-box .dsCountDown.ds-white > .ds-element.ds-element-seconds {
+      display: none; }
+    .our-forum .main-content .timer-box .ds-white .ds-element {
+      border: 0; }
+    .our-forum .main-content .timer-box .dsCountDown.ds-white {
+      border: 0;
+      background: #fff;
+      -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      width: 361px;
+      height: 120px;
+      text-align: center; }
+    .our-forum .main-content .timer-box .ds-element {
+      margin: 0 auto;
+      margin-right: 10px; }
+      .our-forum .main-content .timer-box .ds-element .ds-element-title {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: right;
+        letter-spacing: 0.02em;
+        color: #4F4F4F;
+        font-family: 'Gilroy-Regular', sans-serif;
+        text-transform: capitalize;
         text-align: center; }
-        @media (max-device-width: 1199px) {
-          .our-forum .main-content .timer-box .dsCountDown.ds-white {
-            width: 245px;
-            height: 90px; } }
-      .our-forum .main-content .timer-box .ds-element {
-        margin: 0 auto;
-        margin-right: 10px; }
-        .our-forum .main-content .timer-box .ds-element .ds-element-title {
-          font-size: 18px;
-          line-height: 150%;
-          text-align: right;
-          letter-spacing: 0.02em;
-          color: #4F4F4F;
-          font-family: 'Gilroy-Regular', sans-serif;
-          text-transform: capitalize;
-          text-align: center; }
-        .our-forum .main-content .timer-box .ds-element .ds-element-value {
-          font-weight: bold;
-          font-size: 64px;
-          line-height: 150%;
-          letter-spacing: 0.02em;
-          color: #7B20B1;
-          text-align: center;
-          margin-top: -13px;
-          position: relative; }
-          @media (max-device-width: 1199px) {
-            .our-forum .main-content .timer-box .ds-element .ds-element-value {
-              font-size: 45px; } }
-          .our-forum .main-content .timer-box .ds-element .ds-element-value::after {
-            content: ":";
-            position: absolute;
-            top: 0;
-            right: -22px; }
-          .our-forum .main-content .timer-box .ds-element .ds-element-value.ds-minutes::after {
-            display: none; }
-    .our-forum .main-content .timer-box.mobile {
-      display: none;
-      margin-top: 120px;
-      text-align: center;
-      margin-bottom: 35px; }
-      @media (max-device-width: 991px) {
-        .our-forum .main-content .timer-box.mobile {
-          display: block; } }
-      .our-forum .main-content .timer-box.mobile::after {
-        display: none; }
-      .our-forum .main-content .timer-box.mobile img {
-        margin-right: 40px;
-        width: 56px;
-        height: 80px;
-        margin-top: -58px; }
-      .our-forum .main-content .timer-box.mobile .dsCountDown::after {
-        content: "";
-        position: absolute;
-        left: -30px;
-        top: 40px;
-        background: url(../img/arrow.png);
-        width: 21px;
-        height: 16px;
-        background-repeat: no-repeat;
-        -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-                transform: rotate(180deg);
-        background-size: contain; }
-      .our-forum .main-content .timer-box.mobile .dsCountDown.ds-white {
-        width: 189px;
-        height: 80px;
-        -webkit-box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
-                box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        padding-left: 11px;
-        padding-right: 3px; }
-      .our-forum .main-content .timer-box.mobile .ds-element {
-        margin-right: 10px; }
-        .our-forum .main-content .timer-box.mobile .ds-element.ds-element-minutes {
-          padding: 0;
-          margin-right: 0; }
-        .our-forum .main-content .timer-box.mobile .ds-element .ds-element-title {
-          font-size: 12px;
-          line-height: 150%;
-          margin-bottom: 5px; }
-        .our-forum .main-content .timer-box.mobile .ds-element .ds-element-value {
-          font-size: 36px;
-          line-height: 150%; }
-          .our-forum .main-content .timer-box.mobile .ds-element .ds-element-value::after {
-            right: -14px; }
-
-/* 8.  Footer */
-footer {
-  background-color: rgba(15, 14, 22, 0.9);
-  background-image: url(../img/footer-bg.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 538px; }
-  footer .content-box {
-    text-align: left; }
-    footer .content-box h4 {
-      color: #fff;
-      font-weight: 800;
-      font-size: 54px;
-      line-height: 70px;
-      font-family: 'Gilroy-Black', sans-serif;
-      text-transform: uppercase;
-      background-color: #fff;
-      background-image: url(../img/article-mask.png);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-position-x: -621px;
-      background-position-y: -57px;
-      margin-bottom: 50px; }
+      .our-forum .main-content .timer-box .ds-element .ds-element-value {
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: #7B20B1;
+        text-align: center;
+        margin-top: -13px;
+        position: relative; }
+        .our-forum .main-content .timer-box .ds-element .ds-element-value::after {
+          content: ":";
+          position: absolute;
+          top: 0;
+          right: -22px; }
+        .our-forum .main-content .timer-box .ds-element .ds-element-value.ds-minutes::after {
+          display: none; }
